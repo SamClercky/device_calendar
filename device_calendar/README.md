@@ -4,6 +4,11 @@
 
 A cross platform plugin for modifying calendars on the user's device.
 
+## Notes on fork (what's different)
+* Based on latest public release (3.1.0, at the time of writing)
+* Changed some refs from activity to context for compatibility with `background tasks` in `android`
+* Added a extra argument `location` in constructor of `Event` for easier creation of `Event`s
+
 ## Features
 
 * Ability to request permissions to modify calendars on the user's device
