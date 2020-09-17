@@ -48,7 +48,9 @@ class Event {
       this.description,
       this.attendees,
       this.recurrenceRule,
-      this.allDay = false});
+      this.allDay = false,
+      this.location,
+      });
 
   Event.fromJson(Map<String, dynamic> json) {
     if (json == null) {
