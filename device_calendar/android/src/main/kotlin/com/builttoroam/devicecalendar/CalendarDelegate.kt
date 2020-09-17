@@ -581,8 +581,8 @@ class CalendarDelegate : PluginRegistry.RequestPermissionsResultListener {
 
     private fun arePermissionsGranted(): Boolean {
         if (atLeastAPI(23)) {
-            val writeCalendarPermissionGranted = _registrar!!.activity().checkSelfPermission(Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED
-            val readCalendarPermissionGranted = _registrar!!.activity().checkSelfPermission(Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED
+            val writeCalendarPermissionGranted = _registrar!!.context().checkSelfPermission(Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED
+            val readCalendarPermissionGranted = _registrar!!.context().checkSelfPermission(Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED
             return writeCalendarPermissionGranted && readCalendarPermissionGranted
         }
 
